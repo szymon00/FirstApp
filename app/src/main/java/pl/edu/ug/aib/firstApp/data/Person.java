@@ -1,14 +1,15 @@
 package pl.edu.ug.aib.firstApp.data;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
+
 public class Person {
 
     public String name;
+
     public String company;
 
-    public Person(String name, String company) {
-        this.name = name;
-        this.company = company;
-    }
+    public String phone;
 
 }
-

@@ -64,8 +64,7 @@ public class LoginActivity extends ActionBarActivity {
 
     public void loginSuccess(User user) {
         ringProgressDialog.dismiss();
-        Toast.makeText(this, user.sessionId, Toast.LENGTH_LONG).show();
-        Log.d(this.getClass().getSimpleName(), "Login succeded");
+       FirstActivity_.intent(this).user(user).start();
     }
 
     public void showError(Exception e) {
